@@ -5,12 +5,12 @@ Input: A password as a string.
 
 Output: Is the password safe or not as a boolean or any data type that can be converted and processed as a boolean. In the results you will see the converted results.
 
-checkio('A1213pokl') == False
-checkio('bAse730onE') == True
-checkio('asasasasasasasaas') == False
-checkio('QWERTYqwerty') == False
-checkio('123456123456') == False
-checkio('QwErTy911poqqqq') == True
+password_checker('A1213pokl') == False
+password_checker('bAse730onE') == True
+password_checker('asasasasasasasaas') == False
+password_checker('QWERTYqwerty') == False
+password_checker('123456123456') == False
+password_checker('QwErTy911poqqqq') == True
 
 Precondition:
 re.match("[a-zA-Z0-9]+", password)
@@ -28,7 +28,7 @@ lowercase letter
 only ascii latin latters & ints
 """
 
-def checkio(data: str) -> bool:
+def password_checker(data: str) -> bool:
     if len(data) < 10:
         #return print("length")
         return False
@@ -87,11 +87,10 @@ def ascii_check(data):
 
 
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert checkio('A1213pokl') == False, "1st example"
-    assert checkio('bAse730onE4') == True, "2nd example"
-    assert checkio('asasasasasasasaas') == False, "3rd example"
-    assert checkio('QWERTYqwerty') == False, "4th example"
-    assert checkio('123456123456') == False, "5th example"
-    assert checkio('QwErTy911poqqqq') == True, "6th example"
-    print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
+    assert password_checker('A1213pokl') == False, "1st example"
+    assert password_checker('bAse730onE4') == True, "2nd example"
+    assert password_checker('asasasasasasasaas') == False, "3rd example"
+    assert password_checker('QWERTYqwerty') == False, "4th example"
+    assert password_checker('123456123456') == False, "5th example"
+    assert password_checker('QwErTy911poqqqq') == True, "6th example"
+
