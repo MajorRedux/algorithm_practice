@@ -5,12 +5,12 @@ Input: A password as a string.
 
 Output: Is the password safe or not as a boolean or any data type that can be converted and processed as a boolean. In the results you will see the converted results.
 
-checkio('A1213pokl') == False
-checkio('bAse730onE') == True
-checkio('asasasasasasasaas') == False
-checkio('QWERTYqwerty') == False
-checkio('123456123456') == False
-checkio('QwErTy911poqqqq') == True
+password_checker('A1213pokl') == False
+password_checker('bAse730onE') == True
+password_checker('asasasasasasasaas') == False
+password_checker('QWERTYqwerty') == False
+password_checker('123456123456') == False
+password_checker('QwErTy911poqqqq') == True
 """
 
 import re
@@ -19,7 +19,7 @@ DIGIT_RE = re.compile('\d')
 UPPER_CASE_RE = re.compile('[A-Z]')
 LOWER_CASE_RE = re.compile('[a-z]')
 
-def checkio(data):
+def password_checker(data):
     """
     Return True if password strong and False if not
     
@@ -41,10 +41,9 @@ def checkio(data):
     return True
 
 if __name__ == '__main__':
-    assert checkio('A1213pokl')==False, 'First'
-    assert checkio('bAse730onE4')==True, 'Second'
-    assert checkio('asasasasasasasaas')==False, 'Third'
-    assert checkio('QWERTYqwerty')==False, 'Fourth'
-    assert checkio('123456123456')==False, 'Fifth'
-    assert checkio('QwErTy911poqqqq')==True, 'Sixth'
-    print('All ok')
+    assert password_checker('A1213pokl')==False, 'First'
+    assert password_checker('bAse730onE4')==True, 'Second'
+    assert password_checker('asasasasasasasaas')==False, 'Third'
+    assert password_checker('QWERTYqwerty')==False, 'Fourth'
+    assert password_checker('123456123456')==False, 'Fifth'
+    assert password_checker('QwErTy911poqqqq')==True, 'Sixth'
