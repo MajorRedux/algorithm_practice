@@ -11,6 +11,14 @@ from typing import List, Any
 def all_the_same(elements: List[Any]) -> bool:
     return (len(set(elements)) == 1 or len(set(elements)) == 0)
 
+"""
+Alternative:
+
+def all_the_same(elements):
+   return elements[1:] == elements[:-1]
+"""  
+ 
+
 
 if __name__ == '__main__':
     print("Example:")
